@@ -119,7 +119,7 @@ footer p {
   }
   
   main {
-    padding-top: 100px;
+    padding-top: 50px; /* Adjust the top padding as needed */
     padding-bottom: 20px;
   }
   
@@ -154,4 +154,5 @@ footer p {
     background-color: #555;
   }
 }
+
 
