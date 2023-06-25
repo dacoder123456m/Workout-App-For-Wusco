@@ -45,3 +45,21 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+// Wait for the DOM to load
+      document.addEventListener("DOMContentLoaded", function(event) {
+        // Get all the dropdown toggle elements
+        var dropdownToggles = document.getElementsByClassName("dropdown-toggle");
+
+        // Attach event listeners to each dropdown toggle
+        for (var i = 0; i < dropdownToggles.length; i++) {
+          dropdownToggles[i].addEventListener("click", function() {
+            // Toggle the display of the next sibling (dropdown content)
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "none") {
+              dropdownContent.style.display = "block";
+            } else {
+              dropdownContent.style.display = "none";
+            }
+          });
+        }
+      });
