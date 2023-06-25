@@ -9,6 +9,7 @@
     // Add this JavaScript code to prevent reload on scroll in Safari
     (function() {
       var isScrolling;
+      var body = document.body;
 
       // Listen for the scroll event
       window.addEventListener('scroll', function() {
@@ -18,16 +19,17 @@
         // Set a timeout to run after scrolling ends
         isScrolling = setTimeout(function() {
           // Add the overscroll-behavior property back after scrolling ends
-          document.body.style.overscrollBehavior = 'auto';
+          body.style.overscrollBehaviorY = 'auto';
         }, 100);
-      }, false);
+      }, { passive: true });
 
       // Disable the overscroll-behavior property when scrolling starts
       window.addEventListener('scroll', function() {
-        document.body.style.overscrollBehavior = 'none';
+        body.style.overscrollBehaviorY = 'none';
       }, { passive: true });
     })();
-  </script>
+</script>
+
   </head>
   <body>
     <header>
