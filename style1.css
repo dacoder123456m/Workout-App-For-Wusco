@@ -94,13 +94,13 @@ footer {
   color: #fff;
   padding: 20px 0;
   text-align: center;
-  margin-top: 40px;
 }
 
 footer p {
   margin: 0;
   font-size: 14px;
   color: #fff;
+  line-height: 1.4; /* Adjust the line height for better spacing */
 }
 
 /* Media query for smaller screens */
@@ -119,8 +119,8 @@ footer p {
   }
   
   main {
-    padding-top: 50px; /* Adjust the top padding as needed */
-    padding-bottom: 20px;
+    padding-top: 200px;
+    padding-bottom: 50px; /* Increase the bottom padding for better spacing */
   }
   
   .container {
@@ -129,13 +129,12 @@ footer p {
   
   .day h3 {
     font-size: 20px;
-    margin-top: 10px; /* Adjust the top margin for better spacing */
   }
   
   ul {
     font-size: 16px;
   }
-
+  
   /* Custom scrollbar for smaller screens */
   ::-webkit-scrollbar {
     width: 8px;
@@ -154,5 +153,3 @@ footer p {
     background-color: #555;
   }
 }
-
-
