@@ -103,13 +103,11 @@ footer p {
   color: #fff;
 }
 
-/* Adjust the spacing between workout routine header and workout routines on smaller screens */
-@media (max-width: 414px) { /* Adjust the max-width as needed */
-  .day:first-child {
-    margin-top: 0;
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
   }
-}
-
   
   header h1 {
     font-size: 24px;
@@ -121,8 +119,8 @@ footer p {
   }
   
   main {
-    padding-top: 200px;
-    padding-bottom: 50px; /* Increase the bottom padding for better spacing */
+    padding-top: 100px;
+    padding-bottom: 20px;
   }
   
   .container {
@@ -131,6 +129,7 @@ footer p {
   
   .day h3 {
     font-size: 20px;
+    margin-top: 10px; /* Adjust the top margin for better spacing */
   }
   
   ul {
@@ -155,5 +154,4 @@ footer p {
     background-color: #555;
   }
 }
-
 
