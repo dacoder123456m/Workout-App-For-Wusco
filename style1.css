@@ -59,6 +59,36 @@ nav a:hover {
   color: #ff8c00;
 }
 
+/* Dropdown menu styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
 /* Main content styles */
 main {
   padding: 100px 0 20px;
@@ -119,6 +149,15 @@ footer p {
     margin: 10px 0;
   }
 
+  .dropdown {
+    display: block;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+
   main {
     padding-top: 50px; /* Adjust the top padding as needed */
     padding-bottom: 20px;
@@ -160,3 +199,4 @@ footer p {
     overscroll-behavior: contain;
   }
 }
+
