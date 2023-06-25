@@ -68,9 +68,8 @@ nav a {
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  left: 0;
-  right: 0;
-  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
   top: 100%;
   margin-top: 10px;
   white-space: nowrap;
@@ -99,6 +98,10 @@ nav a {
 /* Main content styles */
 main {
   padding: 100px 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .day {
@@ -108,7 +111,6 @@ main {
   border-radius: 5px;
   padding: 20px;
   position: relative;
-  text-align: center;
 }
 
 .day h3 {
@@ -137,13 +139,6 @@ li:last-child {
 
 .video {
   width: 100%;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-.video iframe {
-  max-width: 100%;
 }
 
 /* Footer styles */
@@ -217,4 +212,3 @@ footer p {
     overscroll-behavior: contain;
   }
 }
-
