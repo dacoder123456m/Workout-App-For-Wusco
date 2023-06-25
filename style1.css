@@ -70,8 +70,8 @@ nav a {
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-  top: 100%;
-  margin-top: 10px;
+  top: calc(100% + 10px);
+  margin-top: 0;
   white-space: nowrap;
   text-align: center;
 }
@@ -212,4 +212,3 @@ footer p {
     overscroll-behavior: contain;
   }
 }
-
