@@ -195,3 +195,152 @@ footer p {
   }
 }
 
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  color: #333333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.main-nav {
+  margin-bottom: 20px;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav li {
+  margin-right: 20px;
+}
+
+.workout-plan {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.day h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.day ul {
+  list-style: none;
+  padding: 0;
+}
+
+.day li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.day li .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.day li:hover .dropdown {
+  display: block;
+}
+
+.day li .dropdown-toggle {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.day li .dropdown-content {
+  padding: 20px;
+}
+
+.day li .dropdown-content .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  height: 0;
+}
+
+.day li .dropdown-content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #cccccc;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .main-nav li {
+    margin-right: 10px;
+  }
+
+  .day {
+    width: calc(50% - 10px);
+  }
+}
+
+
