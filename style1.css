@@ -7,6 +7,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: #f2f2f2;
+  overscroll-behavior: none; /* Prevent scroll bounce effect in Safari */
 }
 
 /* Set container width and center it */
@@ -94,13 +95,13 @@ footer {
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  margin-top: 40px;
 }
 
 footer p {
   margin: 0;
   font-size: 14px;
   color: #fff;
-  line-height: 1.4; /* Adjust the line height for better spacing */
 }
 
 /* Media query for smaller screens */
@@ -154,5 +155,4 @@ footer p {
     background-color: #555;
   }
 }
-
 
