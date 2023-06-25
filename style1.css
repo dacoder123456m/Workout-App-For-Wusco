@@ -154,13 +154,9 @@ footer p {
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
-}
 
-/* Fix for scrolling issue in Safari */
-@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
-  body {
-    overscroll-behavior: auto;
-    overscroll-behavior-y: none;
+  /* Fix for scrolling issue in Safari */
+  body.overscroll-fix {
+    overscroll-behavior: contain;
   }
-}}
-
+}
