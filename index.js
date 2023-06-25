@@ -34,3 +34,15 @@
 
       // Display an alert with the current day
       alert('Today is ' + currentDay);
+
+// Get all the dropdown toggle elements
+var dropdownToggle = document.getElementsByClassName("dropdown-toggle");
+
+// Loop through the toggle elements and attach click event listeners
+for (var i = 0; i < dropdownToggle.length; i++) {
+  dropdownToggle[i].addEventListener("click", function() {
+    // Toggle the "active" class on the parent element (dropdown container)
+    this.parentElement.classList.toggle("active");
+  });
+}
+
