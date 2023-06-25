@@ -7,7 +7,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: #f2f2f2;
-  overscroll-behavior: none; /* Prevent scroll bounce effect in Safari */
+  overscroll-behavior-y: contain; /* Prevent scroll bounce effect in Safari */
 }
 
 /* Set container width and center it */
@@ -155,4 +155,12 @@ footer p {
     background-color: #555;
   }
 }
+
+/* Fix for scrolling issue in Safari */
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+  body {
+    overscroll-behavior: auto;
+    overscroll-behavior-y: none;
+  }
+}}
 
