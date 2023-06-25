@@ -120,7 +120,7 @@ footer p {
   
   main {
     padding-top: 200px;
-    padding-bottom: 50px; /* Increase the bottom padding for better spacing */
+    padding-bottom: 20px; /* Adjust the bottom padding as desired */
   }
   
   .container {
@@ -129,6 +129,7 @@ footer p {
   
   .day h3 {
     font-size: 20px;
+    margin-bottom: 10px; /* Adjust the margin-bottom as desired */
   }
   
   ul {
@@ -153,3 +154,4 @@ footer p {
     background-color: #555;
   }
 }
+
