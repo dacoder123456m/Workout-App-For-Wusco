@@ -70,7 +70,7 @@ nav a {
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-  top: 100%;
+  top: calc(100% + 10px);
 }
 
 .dropdown-toggle {
@@ -209,5 +209,4 @@ footer p {
     overscroll-behavior: contain;
   }
 }
-
 
