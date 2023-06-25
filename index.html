@@ -99,9 +99,10 @@
       var currentDay = days[today.getDay()];
 
       // Update the content of the <p> element
-      var currentDayElement = document.getElementById('currentDay');
-      currentDayElement.textContent = 'Today is ' + currentDay;
+      var customDayElement = document.getElementById('customDay');
+      customDayElement.textContent = 'Today is ' + currentDay;
     </script>
+    <p id="customDay"></p>
   </body>
 </html>
 
