@@ -20,6 +20,10 @@
       isScrolling = setTimeout(function() {
         // Add the overscroll-behavior property back after scrolling ends
         body.style.overscrollBehaviorY = 'scroll';
+        if (window.pageYOffset <= 0) {
+          // Scroll to a small distance to prevent Safari from reloading
+          window.scrollTo(0, 1);
+        }
       }, 100);
     }, { passive: true });
 
