@@ -153,11 +153,6 @@ footer p {
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
-
-  /* Hide overflow on smaller screens */
-  body {
-    overflow: hidden;
-  }
 }
 
 
