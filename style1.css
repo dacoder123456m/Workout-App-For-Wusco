@@ -20,11 +20,11 @@ body {
 /* Header styles */
 header {
   background-color: #333;
+  padding: 10px;
   color: #fff;
-  padding: 20px 0;
 }
 
-header h1 {
+h1 {
   margin: 0;
   text-align: center;
   font-size: 36px;
@@ -32,14 +32,14 @@ header h1 {
 }
 
 nav ul {
+  display: flex;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 nav li {
-  display: inline-block;
   margin-right: 20px;
 }
 
@@ -58,11 +58,9 @@ nav a {
 /* Dropdown menu styles */
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 
 .dropdown-content {
-  position: absolute;
   display: none;
   min-width: 160px;
   background-color: #f9f9f9;
@@ -91,17 +89,21 @@ nav a {
   background-color: #ddd;
 }
 
-.dropdown.open .dropdown-content {
+.dropdown.show .dropdown-content {
   display: block;
 }
 
 /* Main content styles */
 main {
-  padding: 100px 0 20px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.workout-plan {
+  margin-top: 20px;
 }
 
 .day {
@@ -145,16 +147,14 @@ li:last-child {
 /* Footer styles */
 footer {
   background-color: #333;
+  padding: 10px;
   color: #fff;
-  padding: 20px 0;
   text-align: center;
-  margin-top: 40px;
 }
 
 footer p {
   margin: 0;
   font-size: 14px;
-  color: #fff;
 }
 
 /* Media query for smaller screens */
@@ -163,7 +163,7 @@ footer p {
     padding: 10px 20px;
   }
 
-  header h1 {
+  h1 {
     font-size: 24px;
   }
 
@@ -213,4 +213,3 @@ footer p {
     overscroll-behavior: contain;
   }
 }
-
