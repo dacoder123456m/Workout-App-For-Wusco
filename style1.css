@@ -138,6 +138,12 @@ li:last-child {
 .video {
   width: 100%;
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.video iframe {
+  max-width: 100%;
 }
 
 /* Footer styles */
@@ -211,3 +217,4 @@ footer p {
     overscroll-behavior: contain;
   }
 }
+
