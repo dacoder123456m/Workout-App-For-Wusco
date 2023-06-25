@@ -1,18 +1,3 @@
-// Get all the video elements
-var videos = document.getElementsByClassName("dropdown-toggle");
-
-// Loop through the video elements and attach click event listeners
-for (var i = 0; i < videos.length; i++) {
-  videos[i].addEventListener("click", function() {
-    // Find the closest parent element with class "dropdown" to get the video URL
-    var dropdown = this.closest(".dropdown");
-    var videoUrl = dropdown.querySelector("iframe").src;
-
-    // Open the video URL in a new page
-    window.open(videoUrl, "_blank");
-  });
-}
-
 // Add this JavaScript code to prevent reload on scroll in Safari
 (function() {
   var isScrolling;
@@ -41,4 +26,22 @@ for (var i = 0; i < videos.length; i++) {
     }
   }, false);
 })();
+
+// Add this JavaScript code to activate dropdown menu on "Watch Video" button click
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all the "Watch Video" buttons
+  var buttons = document.querySelectorAll(".dropdown-toggle");
+
+  // Loop through the buttons and attach click event listeners
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function(event) {
+      // Prevent the default behavior of the button
+      event.preventDefault();
+
+      // Find the closest parent element with class "dropdown" to activate the dropdown menu
+      var dropdown = this.closest(".dropdown");
+      dropdown.classList.toggle("show");
+    });
+  });
+});
 
