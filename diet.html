@@ -8,19 +8,29 @@
     <script>
   // Add this JavaScript code to prevent reload on scroll in Safari
   (function() {
-    var body = document.body;
+    var isScrolling;
 
-    // Adjust the scroll position on page load
-    window.addEventListener('load', function() {
-      if (window.pageYOffset <= 0) {
-        window.scrollTo(0, 1);
-      }
-    });
+    // Listen for the scroll event
+    window.addEventListener('scroll', function() {
+      // Clear the timeout if it has already been set
+      window.clearTimeout(isScrolling);
+
+      // Set a timeout to run after scrolling ends
+      isScrolling = setTimeout(function() {
+        // Add the overscroll-behavior property back after scrolling ends
+        document.body.style.overscrollBehavior = 'auto';
+      }, 100);
+    }, false);
 
     // Disable the overscroll-behavior property when scrolling starts
     window.addEventListener('scroll', function() {
-      body.style.overscrollBehaviorY = 'auto';
+      document.body.style.overscrollBehavior = 'none';
     }, { passive: true });
+
+    // Adjust scroll position on page load to prevent reload on scroll to top
+    window.addEventListener('beforeunload', function() {
+      window.scrollTo(0, 0);
+    });
   })();
 </script>
   </head>
