@@ -113,6 +113,7 @@ main {
   border-radius: 5px;
   padding: 20px;
   position: relative;
+  text-align: center; /* Added to center the contents */
 }
 
 .day h3 {
@@ -155,14 +156,11 @@ footer {
 footer p {
   margin: 0;
   font-size: 14px;
+  color: #fff;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-  header {
-    padding: 10px 20px;
-  }
-
   h1 {
     font-size: 24px;
   }
@@ -213,3 +211,4 @@ footer p {
     overscroll-behavior: contain;
   }
 }
+
