@@ -70,7 +70,7 @@ nav a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: calc(100% + 10px);
+  top: 100%;
   white-space: nowrap;
   text-align: center;
 }
@@ -164,11 +164,4 @@ footer {
 footer p {
   margin: 0;
   font-size: 14px;
-}
-
-@media (max-width: 768px) {
-  .day {
-    margin-left: -80px;
-    margin-right: -80px;
-  }
 }
