@@ -27,9 +27,9 @@
   }, false);
 })();
 
-// Activate dropdown menu on "Watch Video" button click
+// Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function() {
-  // Get all the "Watch Video" buttons
+  // Activate dropdown menu on "Watch Video" button click
   var buttons = document.querySelectorAll(".dropdown-toggle");
 
   // Loop through the buttons and attach click event listeners
@@ -47,6 +47,23 @@ document.addEventListener("DOMContentLoaded", function() {
       var dayWidth = dayDiv.offsetWidth;
 
       // Set the width of the dropdown menu to match the day div
+      dropdown.style.width = dayWidth + "px";
+
+      // Center the dropdown menu horizontally within the day div
+      var dropdownWidth = dropdown.offsetWidth;
+      var offset = (dayWidth - dropdownWidth) / 2;
+      dropdown.style.left = offset + "px";
+    });
+  });
+
+  // Resize dropdown menu on window resize
+  window.addEventListener("resize", function() {
+    var dropdowns = document.querySelectorAll(".dropdown-content");
+
+    // Loop through the dropdown menus and update their width
+    dropdowns.forEach(function(dropdown) {
+      var dayDiv = dropdown.closest(".day");
+      var dayWidth = dayDiv.offsetWidth;
       dropdown.style.width = dayWidth + "px";
 
       // Center the dropdown menu horizontally within the day div
@@ -75,3 +92,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   }
 });
+
