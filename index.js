@@ -1,4 +1,4 @@
-// Prevent reload on scroll in Safari
+// Add this JavaScript code to prevent reload on scroll in Safari
 (function() {
   var isScrolling;
   var scrollPosition = window.pageYOffset;
@@ -38,9 +38,28 @@ document.addEventListener("DOMContentLoaded", function() {
       // Prevent the default behavior of the button
       event.preventDefault();
 
-      // Toggle the display of the next sibling (dropdown content)
-      var dropdownContent = this.nextElementSibling;
-      dropdownContent.classList.toggle("show");
+      // Find the closest parent element with class "dropdown" to activate the dropdown menu
+      var dropdown = this.parentNode.querySelector(".dropdown-content");
+      dropdown.classList.toggle("show");
     });
   });
+});
+
+// Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", function(event) {
+  // Get all the dropdown toggle elements
+  var dropdownToggles = document.getElementsByClassName("dropdown-toggle");
+
+  // Attach event listeners to each dropdown toggle
+  for (var i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function() {
+      // Toggle the display of the next sibling (dropdown content)
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "none") {
+        dropdownContent.style.display = "block";
+      } else {
+        dropdownContent.style.display = "none";
+      }
+    });
+  }
 });
