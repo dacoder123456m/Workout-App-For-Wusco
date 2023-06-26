@@ -145,6 +145,7 @@ li {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  justify-content: center; /* Added to center the dropdown menu */
 }
 
 li:last-child {
@@ -222,4 +223,3 @@ footer p {
     overscroll-behavior: contain;
   }
 }
-
