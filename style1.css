@@ -41,6 +41,7 @@ nav ul {
 
 nav li {
   margin-right: 20px;
+  position: relative;
 }
 
 nav li:last-child {
@@ -68,7 +69,7 @@ nav a {
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  left: 0;
+  left: 50%;
   transform: translateX(-50%);
   top: 100%;
   margin-top: 10px;
@@ -190,6 +191,7 @@ footer p {
 
   ul {
     font-size: 16px;
+    text-align: center; /* Center the list items */
   }
 
   /* Custom scrollbar for smaller screens */
