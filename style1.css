@@ -58,9 +58,7 @@ nav a {
 /* Dropdown menu styles */
 .dropdown {
   position: relative;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  display: inline-block;
 }
 
 .dropdown-content {
@@ -70,13 +68,13 @@ nav a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateX(-50px); /* Adjusted transform property */
   top: 100%;
   white-space: nowrap;
   text-align: center;
-  position: absolute; /* Change position to absolute */
-  padding: 10px; /* Add padding for better appearance */
-  margin-top: 5px; /* Adjust the margin-top as needed */
+  position: absolute;
+  padding: 10px;
+  margin-top: 5px;
 }
 
 .dropdown-toggle {
@@ -101,10 +99,6 @@ nav a {
 /* Main content styles */
 main {
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .workout-plan {
@@ -118,7 +112,6 @@ main {
   border-radius: 5px;
   padding: 20px;
   position: relative;
-  text-align: center; /* Added to center the contents */
 }
 
 .day h3 {
@@ -219,5 +212,3 @@ footer p {
     overscroll-behavior: contain;
   }
 }
-
-
