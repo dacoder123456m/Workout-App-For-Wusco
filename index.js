@@ -7,7 +7,7 @@ function centerDropdown(dropdown) {
   dropdown.style.width = dayDivWidth + "px";
 
   var dropdownWidth = dropdown.offsetWidth;
-  var dropdownLeft = (dayDivWidth - dropdownWidth) / 2 - 5; // Adjust the offset value here
+  var dropdownLeft = (dayDivWidth - dropdownWidth) / 2;
 
   dropdown.style.left = dropdownLeft + "px";
 }
