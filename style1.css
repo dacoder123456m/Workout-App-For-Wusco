@@ -1,159 +1,54 @@
-/* Reset default box-sizing and set font family */
+/* Reset default styles */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* Global styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f2f2f2;
-  overscroll-behavior-y: contain; /* Prevent scroll bounce effect in Safari */
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-/* Set container width and center it */
 .container {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Header styles */
-header {
-  background-color: #333;
-  padding: 10px;
-  color: #fff;
+  padding: 20px;
 }
 
 h1 {
-  margin: 0;
   text-align: center;
-  font-size: 36px;
-  font-weight: bold;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  margin-right: 20px;
-}
-
-nav li:last-child {
-  margin-right: 0;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Dropdown menu styles */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  min-width: 160px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 100%;
-  white-space: nowrap;
-  text-align: center;
-}
-
-.dropdown-toggle {
-  cursor: pointer;
-}
-
-.dropdown-content a {
-  color: #333;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown.show .dropdown-content {
-  display: block;
-}
-
-/* Main content styles */
-main {
-  padding: 20px;
-}
-
-.workout-plan {
-  margin-top: 20px;
-}
-
-.day {
-  margin-bottom: 40px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 20px;
-  text-align: center;
-}
-
-.day h3 {
-  margin-top: 0;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
   margin-bottom: 20px;
 }
 
-ul {
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  text-align: center;
 }
 
-li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
-li:last-child {
-  margin-bottom: 0;
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
+main {
+  margin-top: 20px;
 }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Footer styles */
 footer {
   background-color: #333;
   color: #fff;
@@ -161,7 +56,95 @@ footer {
   text-align: center;
 }
 
-footer p {
-  margin: 0;
-  font-size: 14px;
+/* Dropdown menu styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(5px);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+/* Additional styles for the day div */
+.day {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.day h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.day ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.day ul li {
+  margin-bottom: 10px;
+}
+
+/* Additional styles for the watch video button */
+.watch-video {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Custom scroll bar */
+.day ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+.day ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.day ul::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.day ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .day {
+    width: 100%;
+  }
 }
