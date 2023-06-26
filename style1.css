@@ -74,6 +74,9 @@ nav a {
   top: 100%;
   white-space: nowrap;
   text-align: center;
+  position: absolute; /* Change position to absolute */
+  padding: 10px; /* Add padding for better appearance */
+  margin-top: 5px; /* Adjust the margin-top as needed */
 }
 
 .dropdown-toggle {
@@ -216,6 +219,5 @@ footer p {
     overscroll-behavior: contain;
   }
 }
-
 
 
