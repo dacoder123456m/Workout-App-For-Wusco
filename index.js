@@ -38,8 +38,22 @@ document.addEventListener("DOMContentLoaded", function() {
       // Prevent the default behavior of the button
       event.preventDefault();
 
-      // Find the closest parent element with class "dropdown" to activate the dropdown menu
+      // Find the closest parent element with class "day" to calculate the center position
+      var day = this.closest(".day");
+
+      // Find the dropdown content element
       var dropdown = this.parentNode.querySelector(".dropdown-content");
+
+      // Calculate the horizontal center position of the day div
+      var dayCenter = day.getBoundingClientRect().left + day.offsetWidth / 2;
+
+      // Calculate the left position of the dropdown content
+      var dropdownLeft = dayCenter - dropdown.offsetWidth / 2;
+
+      // Set the left position of the dropdown content
+      dropdown.style.left = dropdownLeft + "px";
+
+      // Toggle the visibility of the dropdown content
       dropdown.classList.toggle("show");
     });
   });
