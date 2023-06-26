@@ -1,4 +1,4 @@
-// Add this JavaScript code to prevent reload on scroll in Safari
+// Prevent reload on scroll in Safari
 (function() {
   var isScrolling;
   var scrollPosition = window.pageYOffset;
@@ -27,7 +27,7 @@
   }, false);
 })();
 
-// Add this JavaScript code to activate dropdown menu on "Watch Video" button click
+// Activate dropdown menu on "Watch Video" button click
 document.addEventListener("DOMContentLoaded", function() {
   // Get all the "Watch Video" buttons
   var buttons = document.querySelectorAll(".dropdown-toggle");
@@ -38,28 +38,9 @@ document.addEventListener("DOMContentLoaded", function() {
       // Prevent the default behavior of the button
       event.preventDefault();
 
-      // Find the closest parent element with class "dropdown" to activate the dropdown menu
-      var dropdown = this.closest(".dropdown");
-      dropdown.classList.toggle("show");
+      // Toggle the display of the next sibling (dropdown content)
+      var dropdownContent = this.nextElementSibling;
+      dropdownContent.classList.toggle("show");
     });
   });
 });
-
-// Wait for the DOM to load
-      document.addEventListener("DOMContentLoaded", function(event) {
-        // Get all the dropdown toggle elements
-        var dropdownToggles = document.getElementsByClassName("dropdown-toggle");
-
-        // Attach event listeners to each dropdown toggle
-        for (var i = 0; i < dropdownToggles.length; i++) {
-          dropdownToggles[i].addEventListener("click", function() {
-            // Toggle the display of the next sibling (dropdown content)
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "none") {
-              dropdownContent.style.display = "block";
-            } else {
-              dropdownContent.style.display = "none";
-            }
-          });
-        }
-      });
