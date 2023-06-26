@@ -58,9 +58,12 @@ document.addEventListener("DOMContentLoaded", function() {
 function centerDropdown(dropdown) {
   var dayDiv = dropdown.closest(".day");
   var dayDivWidth = dayDiv.offsetWidth;
+
+  // Set the width of the dropdown menu
+  dropdown.style.width = dayDivWidth + "px";
+
   var dropdownWidth = dropdown.offsetWidth;
   var dropdownLeft = (dayDivWidth - dropdownWidth) / 2;
 
   dropdown.style.left = dropdownLeft + "px";
 }
-
