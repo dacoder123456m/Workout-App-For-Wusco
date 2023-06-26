@@ -11,6 +11,7 @@ body {
   line-height: 1.5;
   background-color: #f5f5f5;
   color: #333;
+  overflow-y: scroll; /* Enable vertical scrolling for the whole site */
 }
 
 .container {
@@ -71,7 +72,7 @@ footer {
   top: 100%;
   background-color: #fff;
   border-radius: 4px;
-  padding: 0; /* Remove padding */
+  padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
@@ -102,23 +103,9 @@ footer {
 .day ul {
   list-style: none;
   padding-left: 0;
+  overflow-y: auto; /* Enable vertical scrolling within the day div */
 }
 
-.day ul li {
-  margin-bottom: 10px;
-}
-
-/* Additional styles for the watch video button */
-.watch-video {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* Custom scroll bar */
 .day ul::-webkit-scrollbar {
   width: 8px;
 }
@@ -136,6 +123,16 @@ footer {
   background: #555;
 }
 
+/* Additional styles for the watch video button */
+.watch-video {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .container {
@@ -145,5 +142,22 @@ footer {
   .day {
     width: 100%;
   }
-}
 
+  /* Additional mobile styles */
+  body {
+    overflow-y: auto;
+  }
+  
+  .day ul::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .day ul::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+  }
+  
+  .day ul::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
