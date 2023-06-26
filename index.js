@@ -27,9 +27,9 @@
   }, false);
 })();
 
-// Wait for the DOM to load
+// Activate dropdown menu on "Watch Video" button click
 document.addEventListener("DOMContentLoaded", function() {
-  // Activate dropdown menu on "Watch Video" button click
+  // Get all the "Watch Video" buttons
   var buttons = document.querySelectorAll(".dropdown-toggle");
 
   // Loop through the buttons and attach click event listeners
@@ -42,34 +42,14 @@ document.addEventListener("DOMContentLoaded", function() {
       var dropdown = this.parentNode.querySelector(".dropdown-content");
       dropdown.classList.toggle("show");
 
-      // Calculate the width of the day div
+      // Calculate the left position to center the dropdown menu within the day div
       var dayDiv = this.closest(".day");
-      var dayWidth = dayDiv.offsetWidth;
+      var dayDivRect = dayDiv.getBoundingClientRect();
+      var dropdownContentRect = dropdown.getBoundingClientRect();
+      var leftPosition = dayDivRect.left + (dayDivRect.width - dropdownContentRect.width) / 2;
 
-      // Set the width of the dropdown menu to match the day div
-      dropdown.style.width = dayWidth + "px";
-
-      // Center the dropdown menu horizontally within the day div
-      var dropdownWidth = dropdown.offsetWidth;
-      var offset = (dayWidth - dropdownWidth) / 2;
-      dropdown.style.left = offset + "px";
-    });
-  });
-
-  // Resize dropdown menu on window resize
-  window.addEventListener("resize", function() {
-    var dropdowns = document.querySelectorAll(".dropdown-content");
-
-    // Loop through the dropdown menus and update their width
-    dropdowns.forEach(function(dropdown) {
-      var dayDiv = dropdown.closest(".day");
-      var dayWidth = dayDiv.offsetWidth;
-      dropdown.style.width = dayWidth + "px";
-
-      // Center the dropdown menu horizontally within the day div
-      var dropdownWidth = dropdown.offsetWidth;
-      var offset = (dayWidth - dropdownWidth) / 2;
-      dropdown.style.left = offset + "px";
+      // Set the left position of the dropdown menu
+      dropdown.style.left = leftPosition + "px";
     });
   });
 });
@@ -92,4 +72,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   }
 });
-
