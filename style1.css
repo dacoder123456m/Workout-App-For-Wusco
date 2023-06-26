@@ -58,7 +58,8 @@ nav a {
 /* Dropdown menu styles */
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
@@ -215,4 +216,5 @@ footer p {
     overscroll-behavior: contain;
   }
 }
+
 
