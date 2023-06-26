@@ -42,28 +42,36 @@ document.addEventListener("DOMContentLoaded", function() {
       var dropdown = this.parentNode.querySelector(".dropdown-content");
       dropdown.classList.toggle("show");
 
-      // Center the dropdown horizontally within the day div
-      centerDropdown(dropdown);
-    });
-  });
+      // Calculate the width of the day div
+      var dayDiv = this.closest(".day");
+      var dayWidth = dayDiv.offsetWidth;
 
-  // Center the dropdown on page load (if open)
-  var openDropdowns = document.querySelectorAll(".dropdown-content.show");
-  openDropdowns.forEach(function(dropdown) {
-    centerDropdown(dropdown);
+      // Set the width of the dropdown menu to match the day div
+      dropdown.style.width = dayWidth + "px";
+
+      // Center the dropdown menu horizontally within the day div
+      var dropdownWidth = dropdown.offsetWidth;
+      var offset = (dayWidth - dropdownWidth) / 2;
+      dropdown.style.left = offset + "px";
+    });
   });
 });
 
-// Function to center the dropdown horizontally within the day div
-function centerDropdown(dropdown) {
-  var dayDiv = dropdown.closest(".day");
-  var dayDivWidth = dayDiv.offsetWidth;
+// Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", function(event) {
+  // Get all the dropdown toggle elements
+  var dropdownToggles = document.getElementsByClassName("dropdown-toggle");
 
-  // Set the width of the dropdown menu
-  dropdown.style.width = dayDivWidth + "px";
-
-  var dropdownWidth = dropdown.offsetWidth;
-  var dropdownLeft = (dayDivWidth - dropdownWidth) / 2;
-
-  dropdown.style.left = dropdownLeft + "px";
-}
+  // Attach event listeners to each dropdown toggle
+  for (var i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function() {
+      // Toggle the display of the next sibling (dropdown content)
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "none") {
+        dropdownContent.style.display = "block";
+      } else {
+        dropdownContent.style.display = "none";
+      }
+    });
+  }
+});
