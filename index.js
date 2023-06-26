@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var offset = (dayWidth - dropdownWidth) / 2;
       dropdown.style.left = "50%";
       dropdown.style.transform = 'translateX(-50%)';
-      dropdown.style.marginLeft = offset + "px";
+      dropdown.style.marginLeft = "0";
     });
   });
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var offset = (dayWidth - dropdownWidth) / 2;
       dropdown.style.left = "50%";
       dropdown.style.transform = 'translateX(-50%)';
-      dropdown.style.marginLeft = offset + "px";
+      dropdown.style.marginLeft = "0";
     });
   });
 });
