@@ -52,8 +52,9 @@ document.addEventListener("DOMContentLoaded", function() {
       // Center the dropdown menu horizontally within the day div
       var dropdownWidth = dropdown.offsetWidth;
       var offset = (dayWidth - dropdownWidth) / 2;
-      dropdown.style.left = offset + "px";
+      dropdown.style.left = "50%";
       dropdown.style.transform = 'translateX(-50%)';
+      dropdown.style.marginLeft = offset + "px";
     });
   });
 
@@ -70,8 +71,9 @@ document.addEventListener("DOMContentLoaded", function() {
       // Center the dropdown menu horizontally within the day div
       var dropdownWidth = dropdown.offsetWidth;
       var offset = (dayWidth - dropdownWidth) / 2;
-      dropdown.style.left = offset + "px";
+      dropdown.style.left = "50%";
       dropdown.style.transform = 'translateX(-50%)';
+      dropdown.style.marginLeft = offset + "px";
     });
   });
 });
