@@ -75,6 +75,7 @@ footer {
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  overflow: hidden; /* Hide the overflow content */
 }
 
 .dropdown-content.show {
@@ -93,6 +94,7 @@ footer {
   border-radius: 4px;
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Hide the overflow content */
 }
 
 .day h3 {
@@ -103,24 +105,6 @@ footer {
 .day ul {
   list-style: none;
   padding-left: 0;
-  overflow-y: auto; /* Enable vertical scrolling within the day div */
-}
-
-.day ul::-webkit-scrollbar {
-  width: 8px;
-}
-
-.day ul::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.day ul::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-.day ul::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 
 /* Additional styles for the watch video button */
@@ -146,18 +130,5 @@ footer {
   /* Additional mobile styles */
   body {
     overflow-y: auto;
-  }
-  
-  .day ul::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  .day ul::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 2px;
-  }
-  
-  .day ul::-webkit-scrollbar-thumb:hover {
-    background: #555;
   }
 }
