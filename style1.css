@@ -71,12 +71,10 @@ footer {
   top: 100%;
   background-color: #fff;
   border-radius: 4px;
-  padding: 10px;
+  padding: 0; /* Remove padding */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  margin: 0;
 }
-
 
 .dropdown-content.show {
   display: block;
