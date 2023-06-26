@@ -68,7 +68,7 @@ nav a {
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  left: 50%;
+  left: 0;
   transform: translateX(-50%);
   top: 100%;
   margin-top: 10px;
@@ -98,17 +98,11 @@ nav a {
 /* Main content styles */
 main {
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  text-align: center; /* Center the contents */
 }
 
 .workout-plan {
   margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .day {
@@ -136,16 +130,14 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center; /* Center the list items */
 }
 
 li {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-  justify-content: center; /* Added to center the dropdown menu */
+  justify-content: center; /* Center the dropdown menu */
 }
 
 li:last-child {
@@ -223,3 +215,4 @@ footer p {
     overscroll-behavior: contain;
   }
 }
+
