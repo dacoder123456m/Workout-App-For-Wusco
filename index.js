@@ -1,3 +1,17 @@
+// Function to center the dropdown horizontally within the day div
+function centerDropdown(dropdown) {
+  var dayDiv = dropdown.closest(".day");
+  var dayDivWidth = dayDiv.offsetWidth;
+
+  // Set the width of the dropdown menu
+  dropdown.style.width = dayDivWidth + "px";
+
+  var dropdownWidth = dropdown.offsetWidth;
+  var dropdownLeft = (dayDivWidth - dropdownWidth) / 2 - 5; // Adjust the offset value here
+
+  dropdown.style.left = dropdownLeft + "px";
+}
+
 // Add this JavaScript code to prevent reload on scroll in Safari
 (function() {
   var isScrolling;
@@ -46,25 +60,23 @@ document.addEventListener("DOMContentLoaded", function() {
       centerDropdown(dropdown);
     });
   });
-
-  // Center the dropdown on page load (if open)
-  var openDropdowns = document.querySelectorAll(".dropdown-content.show");
-  openDropdowns.forEach(function(dropdown) {
-    centerDropdown(dropdown);
-  });
 });
 
-// Function to center the dropdown horizontally within the day div
-function centerDropdown(dropdown) {
-  var dayDiv = dropdown.closest(".day");
-  var dayDivWidth = dayDiv.offsetWidth;
+// Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", function(event) {
+  // Get all the dropdown toggle elements
+  var dropdownToggles = document.getElementsByClassName("dropdown-toggle");
 
-  // Set the width of the dropdown menu
-  dropdown.style.width = dayDivWidth + "px";
-
-  var dropdownWidth = dropdown.offsetWidth;
-  var dropdownLeft = (dayDivWidth - dropdownWidth) / 2;
-
-  dropdown.style.left = dropdownLeft + "px";
-}
-
+  // Attach event listeners to each dropdown toggle
+  for (var i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function() {
+      // Toggle the display of the next sibling (dropdown content)
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "none") {
+        dropdownContent.style.display = "block";
+      } else {
+        dropdownContent.style.display = "none";
+      }
+    });
+  }
+});
