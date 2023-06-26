@@ -96,3 +96,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   }
 });
+
+// Get the current day
+      var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      var today = new Date();
+      var currentDay = days[today.getDay()];
+
+      // Display an alert with the current day
+      alert('Today is ' + currentDay);
