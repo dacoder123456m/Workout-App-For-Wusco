@@ -71,7 +71,7 @@ nav a {
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-  top: calc(100% + 10px); /* Move the dropdown below the parent element */
+  top: 100%;
   white-space: nowrap;
   text-align: center;
 }
@@ -216,5 +216,6 @@ footer p {
     overscroll-behavior: contain;
   }
 }
+
 
 
